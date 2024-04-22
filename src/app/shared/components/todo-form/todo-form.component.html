@@ -2,12 +2,14 @@
     <div class="card-body">
         <form #todoForm="ngForm" (ngSubmit)="onTodoAdd(todoForm)">
             <div class="form-group">
-                <label for="todoitem">Todo Item</label>
+                <label for="todoitem">Todo Item*</label>
                 <input
                 required
                 ngModel
+                #todoitem="ngModel"
                 name="skill"
                 type="text" class="form-control">
+                <span class="text-danger" *ngIf="todoitem.invalid && todoitem.touched && todoitem.hasError('required')">todoitem field is required</span>
             </div>
             <button class="btn btn-outline-warning btn-block">Add Todo</button>
         </form>
