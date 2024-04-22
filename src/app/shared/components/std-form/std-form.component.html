@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-body">
+        <form #stdForm="ngForm" (ngSubmit)="onStdAdd(stdForm)">
+            <div class="form-group">
+                <label for="firstname">First Name*</label>
+                <input
+                required
+                ngModel
+                #firstname="ngModel"
+                name="firstname"
+                type="text" class="form-control">
+                <span class="text-danger" *ngIf="firstname.invalid && firstname.touched && firstname.hasError('required')">first name field is required</span>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name*</label>
+                <input
+                required
+                ngModel
+                #lastname="ngModel"
+                name="lastname"
+                type="text" class="form-control">
+                <span class="text-danger" *ngIf="lastname.invalid && lastname.touched && lastname.hasError('required')">last name field is required</span>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact*</label>
+                <input
+                required
+                ngModel
+                #contact="ngModel"
+                name="contact"
+                type="number" class="form-control">
+                <span class="text-danger" *ngIf="contact.invalid && contact.touched && contact.hasError('required')">contact name field is required</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input
+                required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                ngModel
+                #email="ngModel"
+                name="email"
+                type="text" class="form-control">
+                <span class="text-danger" *ngIf="email.invalid && email.touched && email.hasError('required')">
+                    Email field is required</span>
+                <span class="text-danger" *ngIf="email.invalid && email.dirty && email.hasError('pattern')">
+                    Please enter valid email address</span>
+            </div>
+            <div class="form-group">
+                <label for="isSubscribed">
+                    <input type="checkbox" required ngModel #isSubscribed="ngModel" name="isSubscribed">
+                    Subscribe for daily updates
+                </label>
+            </div>
+            <button class="btn btn-outline-info btn-block">Add Student</button>
+        </form>
+    </div>
+</div>

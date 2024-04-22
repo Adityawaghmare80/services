@@ -1,0 +1,15 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <form #todoForm="ngForm" (ngSubmit)="onTodoAdd(todoForm)">
+            <div class="form-group">
+                <label for="todoitem">Todo Item</label>
+                <input
+                required
+                ngModel
+                name="skill"
+                type="text" class="form-control">
+            </div>
+            <button class="btn btn-outline-warning btn-block">Add Todo</button>
+        </form>
+    </div>
+</div>
