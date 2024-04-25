@@ -19,8 +19,7 @@ export class StdFormComponent implements OnInit {
 
   onStdAdd(stdForm: NgForm) {
     if (stdForm.valid) {
-      let obj = stdForm.value
-      console.log(obj)
+      let obj = {...stdForm.value, id: Math.floor(Math.random() * 10)}
       this._stdService.createStdInfo(obj)
       stdForm.resetForm()
     }

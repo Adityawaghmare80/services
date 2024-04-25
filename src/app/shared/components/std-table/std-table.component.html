@@ -6,6 +6,8 @@
             <th>Last Name</th>
             <th>Contact</th>
             <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +17,19 @@
             <td>{{std.lastname}}</td>
             <td>{{std.contact}}</td>
             <td>{{std.email}}</td>
+            <td>
+                <span>
+                    <!-- <button class="btn btn-outline-primary">Edit</button> -->
+                    <i class="fa-solid fa-pen-to-square fa-2x text-primary"></i>
+                </span>
+            </td>
+            <td>
+                <span>
+                    <!-- <button class="btn btn-outline-danger" (click)="onDelete(std.id)">Delete</button> -->
+                    <i class="fa-solid fa-trash fa-2x text-danger" (click)="onDelete(std.id)"></i>
+                </span>
+            </td>
+
         </tr>
     </tbody>
 </table>

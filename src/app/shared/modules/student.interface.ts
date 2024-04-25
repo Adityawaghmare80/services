@@ -3,4 +3,5 @@ export interface Istd {
     lastname: string;
     contact: number;
     email: string;
+    id: number;
 }

@@ -30,4 +30,11 @@ export class TodoService {
   createTodo(todo: Itodo){
     this.todoArray.push(todo)
   }
+
+  removeTodo(id:number){
+    console.log(id);
+    let getIndex = this.todoArray.findIndex(todo => todo.id === id);
+    this.todoArray.splice(getIndex, 1)
+    
+  }
 }

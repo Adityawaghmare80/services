@@ -8,6 +8,8 @@ import { TodoFormComponent } from './shared/components/todo-form/todo-form.compo
 import { FormsModule } from '@angular/forms';
 import { StdFormComponent } from './shared/components/std-form/std-form.component';
 import { StdTableComponent } from './shared/components/std-table/std-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { StdTableComponent } from './shared/components/std-table/std-table.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

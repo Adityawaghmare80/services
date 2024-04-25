@@ -17,4 +17,8 @@ export class TodoListComponent implements OnInit {
     this.todoArr = this._todoService.fatchAllTodos();
   }
 
+  onDelete(id: number){
+    this._todoService.removeTodo(id)
+  }
+
 }

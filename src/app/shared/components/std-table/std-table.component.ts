@@ -17,4 +17,8 @@ export class StdTableComponent implements OnInit {
    this.studentArr = this._stdService.fetchAllstd();
   }
 
+  onDelete(id: number){
+    this._stdService.removeStd(id)
+  }
+
 }
